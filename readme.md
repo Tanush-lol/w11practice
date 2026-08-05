@@ -29,6 +29,29 @@ Could not open input file: No such file or directory
 
 error directs to directory */usr/share/wayland-protocols/stable/xdg-shell/xdg-shell.xml* 
 
+[tanush@nixos:~]$ find  /nix/store -type f -name "xdg-shell.xml" 
+### Output
+/nix/store/bmxdr74jgv4z0bkkzjhkbmdpy9y3yvvw-qtbase-6.11.1/share/qt6/wayland/protocols/xdg-shell/xdg-shell.xml
+/nix/store/hikn1nywb0xv4lshlg2v1mz1ci0z22k8-wayland-protocols-1.49/share/wayland-protocols/stable/xdg-shell/xdg-shell.xml
+
+we can see that the 2nd path is close to the dir we enter in the og command 
+
+- */usr/share/wayland-protocols/stable/xdg-shell/xdg-shell.xml* = 
+/nix/store/hikn1nywb0xv4lshlg2v1mz1ci0z22k8-wayland-protocols-1.49/share/wayland-protocols/stable/xdg-shell/xdg-shell.xml
+
+## Resolution 
+[tanush@nixos:~/Projects/w11practice]$ /nix/store/7zcpywbkgw2gx9k0sy3285awbiwg51ci-wayland-scanner-1.25.0-bin/bin/wayland-scanner client-header /nix/store/hikn1nywb0xv4lshlg2v1mz1ci0z22k8-wayland-protocols-1.49/share/wayland-protocols/stable/xdg-shell/xdg-shell.xml waylandclient.h 
+
+[tanush@nixos:~/Projects/w11practice]$ ls
+readme.md  w  waylandclient.h  waytask.c
+
+***We got the header file lol***
+
+
+
+
+
+
 
 
 
