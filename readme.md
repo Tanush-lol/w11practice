@@ -7,7 +7,8 @@ following tutorial - *https://youtu.be/v3eyPpWN4Ts*
 nga said we gotta get the waylandclient header file so we gotta do that except we are on nixos which is a bit harder
 
 we need wayland-scanner which converts XML protocol file to da header 
-the command is *wayland-scanner client-header /usr/share/wayland-protocols/stable/xdg-shell/xdg-shell.xml waylandclient.h*
+the command is 
+- *wayland-scanner client-header /usr/share/wayland-protocols/stable/xdg-shell/xdg-shell.xml waylandclient.h*
 this can be easily done by entering the nix-shell but we are not here to make the program reproducable rather unworkable on other machines **lol**
 
 ## error 1
