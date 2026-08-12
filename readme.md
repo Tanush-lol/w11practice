@@ -19,7 +19,7 @@ bash: wayland-scanner: command not found
 [tanush@nixos:~]$ find /nix/store -type f -name wayland-scanner
 output - /nix/store/7zcpywbkgw2gx9k0sy3285awbiwg51ci-wayland-scanner-1.25.0-bin/bin/wayland-scanner
 
-wayland-scanner = /nix/store/7zcpywbkgw2gx9k0sy3285awbiwg51ci-wayland-scanner-1.25.0-bin/bin/wayland-scanner
+wayland-scanner = nix/store/7zcpywbkgw2gx9k0sy3285awbiwg51ci-wayland-scanner-1.25.0-bin/bin/wayland-scanner
 
 /nix/store/7zcpywbkgw2gx9k0sy3285awbiwg51ci-wayland-scanner-1.25.0-bin/bin/wayland-scanner client-header /usr/share/wayland-protocols/stable/xdg-shell/xdg-shell.xml waylandclient.h
 
@@ -47,11 +47,6 @@ readme.md  w  waylandclient.h  waytask.c
 
 ***We got the header file lol***
 
-
-
-
-
-
-
-
-
+**also for wayland-client.h**
+/nix/store/7zcpywbkgw2gx9k0sy3285awbiwg51ci-wayland-scanner-1.25.0-bin/bin/wayland-scanner client-header /nix/store/ivvsfsk2i261clp9b6l2pf006xhjp99r-wayland-scanner-1.25.0/share/wayland/wayland.xml wayland-client.h
+ran this on the terminal to get the header
