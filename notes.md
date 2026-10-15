@@ -35,4 +35,4 @@ two libraries, libwayland-client and libwayland-server, include an implementatio
 **Resource lifetimes**
 - interfaces which define resources that have finite lifetimes will often include requests and events through which the client or server can state their intention to no longer send requests or events for that object
 - once both sides have agreed to this — asynchronously — do they destroy the resources they allocated for that object.
-
+- client is listening for events and sending requests, and a server listens for requests and sends events.

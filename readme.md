@@ -6,3 +6,5 @@ wayland-project/
 │   ├── buffer.h
 │   ├── protocol.h
 │   └── types.h
+
+g++ -Iinclude src/main.cpp -o app -lwayland-client
