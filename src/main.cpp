@@ -43,11 +43,6 @@ int main(){
   const int stride = width * 4;
   const int shm_pool_size = height * stride * 2;
 
-
-  int fd = allocate_shm_file(shm_pool_size);
-  uint8_t *pool_data = static_cast<uint8_t *>(mmap(NULL, shm_pool_size,
-      PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0));
-
   const char *display_name = std::getenv("WAYLAND_DISPLAY");
   struct wl_display *display = wl_display_connect(display_name);
   wl_registry *registry = wl_display_get_registry(display); 
@@ -56,6 +51,9 @@ int main(){
 	wl_display_roundtrip(display);
   struct wl_surface *surface = wl_compositor_create_surface(state.compositor);
 
+  int fd = allocate_shm_file(shm_pool_size);
+  uint8_t *pool_data = static_cast<uint8_t *>(mmap(NULL, shm_pool_size,
+      PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0));
 
 
   wl_registry_destroy(registry);

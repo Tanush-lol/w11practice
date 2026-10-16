@@ -19,6 +19,8 @@ randname(char *buf)
 		r >>= 5;
 	}
 }
+// struct wl_shm *shm = ...; // Bound from registry
+// struct wl_shm_pool *pool = wl_shm_create_pool(shm, fd, shm_pool_size);
 
 static int create_shm_file(){
 	int retries = 100;
