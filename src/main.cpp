@@ -1,6 +1,9 @@
+#define _POSIX_C_SOURCE 200112L
 #include <iostream>
 #include "w11-client.h"
 #include <string.h>
+#include <shm.hpp>
+#include <sys/mman.h>
 
 struct our_state{
   struct wl_compositor *compositor;
@@ -36,6 +39,15 @@ static const struct wl_registry_listener registry_listener = {
 int main(){
   struct our_state state = {0};
 
+  const int width = 1920, height = 1080;
+  const int stride = width * 4;
+  const int shm_pool_size = height * stride * 2;
+
+
+  int fd = allocate_shm_file(shm_pool_size);
+  uint8_t *pool_data = static_cast<uint8_t *>(mmap(NULL, shm_pool_size,
+      PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0));
+
   const char *display_name = std::getenv("WAYLAND_DISPLAY");
   struct wl_display *display = wl_display_connect(display_name);
   wl_registry *registry = wl_display_get_registry(display); 
@@ -43,6 +55,8 @@ int main(){
   wl_registry_add_listener(registry, &registry_listener, &state);
 	wl_display_roundtrip(display);
   struct wl_surface *surface = wl_compositor_create_surface(state.compositor);
+
+
 
   wl_registry_destroy(registry);
   wl_display_disconnect(display);
