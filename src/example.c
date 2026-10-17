@@ -7,7 +7,7 @@
 #include <sys/mman.h>
 #include <time.h>
 #include <unistd.h>
-#include <wayland-client.h>
+#include "w11-client.h"
 #include "xdg-shell-client-protocol.h"
 
 /* Shared memory support code */
@@ -94,8 +94,8 @@ draw_frame(struct client_state *state)
         return NULL;
     }
 
-  uint32_t *data = static_cast<uint32_t *>(mmap(
-        NULL, size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0));
+    uint32_t *data = mmap(NULL, size,
+            PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
     if (data == MAP_FAILED) {
         close(fd);
         return NULL;
@@ -126,7 +126,7 @@ static void
 xdg_surface_configure(void *data,
         struct xdg_surface *xdg_surface, uint32_t serial)
 {
-  struct client_state *state = static_cast<struct client_state *>(data);
+    struct client_state *state = data;
     xdg_surface_ack_configure(xdg_surface, serial);
 
     struct wl_buffer *buffer = draw_frame(state);
@@ -152,19 +152,16 @@ static void
 registry_global(void *data, struct wl_registry *wl_registry,
         uint32_t name, const char *interface, uint32_t version)
 {
-  struct client_state *state = static_cast<struct client_state *>(data);
+    struct client_state *state = data;
     if (strcmp(interface, wl_shm_interface.name) == 0) {
-    state->wl_shm = static_cast<struct wl_shm *>(
-            wl_registry_bind(
-                wl_registry, name, &wl_shm_interface, 1));
+        state->wl_shm = wl_registry_bind(
+                wl_registry, name, &wl_shm_interface, 1);
     } else if (strcmp(interface, wl_compositor_interface.name) == 0) {
-    state->wl_compositor = static_cast<struct wl_compositor *>(
-            wl_registry_bind(
-                wl_registry, name, &wl_compositor_interface, 4));
+        state->wl_compositor = wl_registry_bind(
+                wl_registry, name, &wl_compositor_interface, 4);
     } else if (strcmp(interface, xdg_wm_base_interface.name) == 0) {
-    state->xdg_wm_base = static_cast<struct xdg_wm_base *>(
-        wl_registry_bind(
-                wl_registry, name, &xdg_wm_base_interface, 1));
+        state->xdg_wm_base = wl_registry_bind(
+                wl_registry, name, &xdg_wm_base_interface, 1);
         xdg_wm_base_add_listener(state->xdg_wm_base,
                 &xdg_wm_base_listener, state);
     }
