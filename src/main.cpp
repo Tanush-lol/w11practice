@@ -1,4 +1,5 @@
 #define _POSIX_C_SOURCE 200112L
+#include "xdg-shell-client-protocol.h"
 #include <iostream>
 #include "w11-client.h"
 #include <string.h>
@@ -8,6 +9,7 @@
 struct our_state{
   struct wl_compositor *compositor;
   struct wl_shm *shm;
+  struct xdg_wm_base *wm_base;
 };
 
 static void handle_reg_global(void *data,struct wl_registry *registry,
@@ -22,6 +24,13 @@ static void handle_reg_global(void *data,struct wl_registry *registry,
     if (strcmp(interface, wl_shm_interface.name) == 0) {
     std::cout<<"interface :"<<interface<<" | "<<"version :"<<version<<" | "<<"name :"<<name<<'\n';
         state->shm = static_cast<wl_shm *>(wl_registry_bind(registry, name, &wl_shm_interface, 1));
+    }
+
+    if (strcmp(interface,xdg_wm_base_interface.name)== 0) {
+      std::cout<<"Binding to wm_base"<<'\n';
+
+      uint32_t bind_version = std::min(version,static_cast<uint32_t>(xdg_wm_base_interface.version));
+      state->wm_base = static_cast<xdg_wm_base *>(wl_registry_bind(registry,name,&xdg_wm_base_interface,1));
     }
 }//handles flashing of available interfaces,which we can bind to
 
@@ -68,6 +77,8 @@ int main(){
   wl_surface_attach(surface, buffer, 0, 0);
   wl_surface_damage(surface, 0, 0, UINT32_MAX, UINT32_MAX);
   wl_surface_commit(surface);
+
+  struct xdg_surface *xdg_surf = xdg_wm_base_get_xdg_surface(state.wm_base,surface);
 
   wl_registry_destroy(registry);
   wl_display_disconnect(display);
