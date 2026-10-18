@@ -52,9 +52,22 @@ int main(){
   struct wl_surface *surface = wl_compositor_create_surface(state.compositor);
 
   int fd = allocate_shm_file(shm_pool_size);
-  uint8_t *pool_data = static_cast<uint8_t *>(mmap(NULL, shm_pool_size,
-      PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0));
+  uint8_t *pool_data = static_cast<uint8_t *>(mmap(NULL, shm_pool_size,PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0));
+  // uint8_t *pool_data = static_cast<uint8_t *>(mmap(NULL, shm_pool_size,3, MAP_SHARED, fd, 0)); // also valid 
+  
+  int index = 0;
+  int offset = height * stride * index;
 
+  struct wl_shm_pool *pool = wl_shm_create_pool(state.shm, fd, shm_pool_size);
+  struct wl_buffer *buffer = wl_shm_pool_create_buffer(pool, offset,
+      width, height, stride, WL_SHM_FORMAT_XRGB8888);
+
+  uint32_t *pixels = (uint32_t *)&pool_data[offset];
+  memset(pixels, 0, width * height * 4);// for pattern 
+
+  wl_surface_attach(surface, buffer, 0, 0);
+  wl_surface_damage(surface, 0, 0, UINT32_MAX, UINT32_MAX);
+  wl_surface_commit(surface);
 
   wl_registry_destroy(registry);
   wl_display_disconnect(display);

@@ -1,5 +1,4 @@
-#define _POSIX_C_SOURCE 200112L
-#include <errno.h>
+#define _POSIX_C_SOURCE 200112L #include <errno.h>
 #include <fcntl.h>
 #include <limits.h>
 #include <stdbool.h>
