@@ -3,91 +3,13 @@
 #include <iostream>
 #include "w11-client.h"
 #include <string.h>
-#include <shm.hpp>
+#include "shm.hpp"
 #include <sys/mman.h>
 #include <unistd.h>
+#include "state.hpp"
+#include "buffer.hpp"
+#include "xdg_surface.hpp"
 
-struct our_state{
-    struct wl_display *wl_display;
-    struct wl_registry *wl_registry;
-    struct wl_shm *shm;
-    struct wl_compositor *compositor;
-    struct xdg_wm_base *wm_base;
-    /* Objects */
-    struct wl_surface *wl_surface;
-    struct xdg_surface *xdg_surface;
-    struct xdg_toplevel *xdg_toplevel;
-};
-
-static void
-wl_buffer_release(void *data, struct wl_buffer *wl_buffer)
-{
-    /* Sent by the compositor when it's no longer using this buffer */
-    wl_buffer_destroy(wl_buffer);
-}
-
-static const struct wl_buffer_listener wl_buffer_listener = {
-    .release = wl_buffer_release,
-};
-
-static struct wl_buffer *draw_frame(struct our_state *state){
-  const int width = 1920, height = 1080;
-  const int stride = width * 4;
-  int size = stride * height;
-
-  const int shm_pool_size = height * stride * 2;
-
-  int fd = allocate_shm_file(shm_pool_size);
-  if(fd == -1){
-    std::cout<<"err in allocate_shm_file()"<<'\n';
-    return nullptr;// why?
-  }
-  uint8_t *pool_data = static_cast<uint8_t *>(mmap(NULL,shm_pool_size,PROT_READ|PROT_WRITE,MAP_SHARED, fd, 0));
-  if(pool_data == MAP_FAILED){
-    std::cout<<"mmap() failed"<<'\n';
-    close(fd);
-    return NULL;
-  }
-  // uint8_t *pool_data = static_cast<uint8_t *>(mmap(NULL, shm_pool_size,3, MAP_SHARED, fd, 0)); // also valid 
-  
-  int index = 0;
-  int offset = height * stride * index;
-
-  struct wl_shm_pool *pool = wl_shm_create_pool(state->shm, fd, shm_pool_size);
-  struct wl_buffer *buffer = wl_shm_pool_create_buffer(pool, offset,width, height, stride, WL_SHM_FORMAT_XRGB8888);
-
-    wl_shm_pool_destroy(pool);
-    close(fd);
-
-  uint32_t *pixels = (uint32_t *)&pool_data[offset];
-  memset(pixels, 0, width * height * 4);// for pattern 
-
-    munmap(pool_data, size);
-    wl_buffer_add_listener(buffer, &wl_buffer_listener, NULL);
-    return buffer;
-}
-
-static void xdg_surface_configure(void*pool_data,struct xdg_surface *xdg_surface,uint32_t serial){
-  struct our_state *state = static_cast<our_state *>(pool_data);
-  xdg_surface_ack_configure(xdg_surface,serial);
-
-  struct wl_buffer *buffer = draw_frame(state);
-  wl_surface_attach(state->wl_surface, buffer, 0, 0);
-  // wl_surface_damage(state->wl_surface, 0, 0, UINT32_MAX, INT32_MAX);
-  wl_surface_commit(state->wl_surface);
-}
-
-static const struct xdg_surface_listener xdg_surface_listener = {
-    .configure = xdg_surface_configure,
-};
-
-static void xdg_wm_base_ping(void *pool_data,struct xdg_wm_base *xdg_wm_base,uint32_t serial){
-  xdg_wm_base_pong(xdg_wm_base, serial);
-}
-
-static const struct xdg_wm_base_listener xdg_wm_base_listener= {
-  .ping = xdg_wm_base_ping,
-};
 
 static void handle_reg_global(void *data,struct wl_registry *registry,
                               uint32_t name,const char *interface,uint32_t version)

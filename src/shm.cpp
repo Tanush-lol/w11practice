@@ -3,9 +3,7 @@
 #include <fcntl.h>
 #include <sys/mman.h>
 #include <time.h>
-#include <iostream>
 #include "w11-client.h"
-#include <string.h>
 #include <unistd.h>
 
 static void
@@ -49,6 +47,5 @@ int allocate_shm_file(size_t size){
 		close(fd);
 		return -1;
 	}
-  std::cout<<"shm file was created "<<'\n';
 	return fd;
 }
