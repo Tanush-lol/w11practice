@@ -53,10 +53,10 @@ struct wl_buffer *draw_frame(struct our_state *state){
     /* Draw checkerboxed background */
     for (int y = 0; y < height; ++y) {
         for (int x = 0; x < width; ++x) {
-            if ((x + y / 8 * 8) % 16 < 8)
-                pool_data[y * width + x] = 0xFF666666;
+            if ((x + ((y / 8 )* 8)) % 16 < 8)
+                pixels[y * width + x] = 0xFF666666;
             else
-                pool_data[y * width + x] = 0xFFEEEEEE;
+                pixels[y * width + x] = 0xFFEEEEEE;
         }
     }
     munmap(pool_data, size);
