@@ -7,6 +7,7 @@
 #include <sys/mman.h>
 #include <unistd.h>
 #include "state.hpp"
+#include "cario.hpp"
 
 static void
 wl_buffer_release(void *data, struct wl_buffer *wl_buffer)
@@ -48,17 +49,18 @@ struct wl_buffer *draw_frame(struct our_state *state){
     wl_shm_pool_destroy(pool);
     close(fd);
 
-  uint32_t *pixels = (uint32_t *)&pool_data[offset];
-  memset(pixels, 0, width * height * 4);// for pattern 
-    /* Draw checkerboxed background */
-    for (int y = 0; y < height; ++y) {
-        for (int x = 0; x < width; ++x) {
-            if ((x + ((y / 8 )* 8)) % 16 < 8)
-                pixels[y * width + x] = 0xFF666666;
-            else
-                pixels[y * width + x] = 0xFFEEEEEE;
-        }
-    }
+  // uint32_t *pixels = (uint32_t *)&pool_data[offset];
+  // memset(pixels, 0, width * height * 4);// for pattern 
+  //   /* Draw checkerboxed background */
+  //   for (int y = 0; y < height; ++y) {
+  //       for (int x = 0; x < width; ++x) {
+  //           if ((x + ((y / 8 )* 8)) % 16 < 8)
+  //               pixels[y * width + x] = 0xFF666666;
+  //           else
+  //               pixels[y * width + x] = 0xFFEEEEEE;
+  //       }
+  //   }
+    drawCarioSquare(pool_data,width,height,offset,stride);
     munmap(pool_data, size);
     wl_buffer_add_listener(buffer, &wl_buffer_listener, NULL);
     return buffer;

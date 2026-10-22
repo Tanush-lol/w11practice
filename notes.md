@@ -67,3 +67,4 @@ compilation terminated.
  [tanush@Tanush w11practice] 
 ❯
 g++ -Iinclude src/main.cpp src/shm.cpp src/xdg-shell-protocol.o -o app -lwayland-client
+g++ sideQuests/cairo.cpp -o a $(pkg-config --cflags --libs cairo)
