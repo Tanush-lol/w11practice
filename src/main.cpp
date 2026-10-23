@@ -47,7 +47,7 @@ static const struct wl_registry_listener registry_listener = {
 };
 
 int main(){
-  struct our_state state = {0};
+  struct our_state state = { 0 };
 
 
   const char *display_name = std::getenv("WAYLAND_DISPLAY");

@@ -1,0 +1,3 @@
+/home/tanush/Projects/w11practice/build/CMakeFiles/roti.dir
+/home/tanush/Projects/w11practice/build/CMakeFiles/edit_cache.dir
+/home/tanush/Projects/w11practice/build/CMakeFiles/rebuild_cache.dir

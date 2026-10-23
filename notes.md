@@ -68,3 +68,7 @@ compilation terminated.
 ❯
 g++ -Iinclude src/main.cpp src/shm.cpp src/xdg-shell-protocol.o -o app -lwayland-client
 g++ sideQuests/cairo.cpp -o a $(pkg-config --cflags --libs cairo)
+
+cmake -S . -B build
+cmake --build build -j"$(nproc)"
+./build/roti
