@@ -2,6 +2,9 @@
 #include <cstdint>
 #include <cstring>
 #include <math.h>
+#include <string>
+
+// top left corner's coordinates are 0,0
 
 void drawArc(cairo_t *cr){
 cairo_translate (cr, 0.2, 0.2); 
@@ -92,7 +95,7 @@ cairo_transform (cr, &mat);
     cairo_stroke (cr);
 }
 
-void renderText(cairo_t *cr){
+void renderText(cairo_t *cr, int x,int y){
     // Font
     cairo_select_font_face(
         cr,
@@ -101,16 +104,16 @@ void renderText(cairo_t *cr){
         CAIRO_FONT_WEIGHT_BOLD
     );
 
-    cairo_set_font_size(cr, 48);
+    cairo_set_font_size(cr, 30);
 
     // Text colour: white
     cairo_set_source_rgb(cr, 0.0, 0.0, 0.0);
 
     // Position (x, y)
-    cairo_move_to(cr, 80, 120);
+    cairo_move_to(cr, x, y);
 
     // Draw text
-    cairo_show_text(cr, "Hello, Roti!");
+    cairo_show_text(cr,("(" + std::to_string(x) + ", " + std::to_string(y) + ")").c_str());
 }
 
 void drawCarioSquare(uint8_t *pool_data,int width,int height,int offset,int stride){
@@ -135,8 +138,10 @@ void drawCarioSquare(uint8_t *pool_data,int width,int height,int offset,int stri
     cairo_rectangle(cr, 20, 20, 80, 80);
     cairo_stroke(cr);
 
-    drawArc(cr);
-    renderText(cr);
+    // drawArc(cr);
+    renderText(cr,100,30);
+    renderText(cr,100,90);
+    renderText(cr,100,150);
 
 
     // Finish drawing before handing the buffer to Wayland
