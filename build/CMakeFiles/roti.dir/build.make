@@ -72,101 +72,115 @@ include CMakeFiles/roti.dir/flags.make
 CMakeFiles/roti.dir/codegen:
 .PHONY : CMakeFiles/roti.dir/codegen
 
-CMakeFiles/roti.dir/src/main.cpp.o: CMakeFiles/roti.dir/flags.make
-CMakeFiles/roti.dir/src/main.cpp.o: /home/tanush/Projects/w11practice/src/main.cpp
-CMakeFiles/roti.dir/src/main.cpp.o: CMakeFiles/roti.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanush/Projects/w11practice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/roti.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/roti.dir/src/main.cpp.o -MF CMakeFiles/roti.dir/src/main.cpp.o.d -o CMakeFiles/roti.dir/src/main.cpp.o -c /home/tanush/Projects/w11practice/src/main.cpp
+CMakeFiles/roti.dir/src/main.c.o: CMakeFiles/roti.dir/flags.make
+CMakeFiles/roti.dir/src/main.c.o: /home/tanush/Projects/w11practice/src/main.c
+CMakeFiles/roti.dir/src/main.c.o: CMakeFiles/roti.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanush/Projects/w11practice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/roti.dir/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/roti.dir/src/main.c.o -MF CMakeFiles/roti.dir/src/main.c.o.d -o CMakeFiles/roti.dir/src/main.c.o -c /home/tanush/Projects/w11practice/src/main.c
 
-CMakeFiles/roti.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/roti.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tanush/Projects/w11practice/src/main.cpp > CMakeFiles/roti.dir/src/main.cpp.i
+CMakeFiles/roti.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/roti.dir/src/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tanush/Projects/w11practice/src/main.c > CMakeFiles/roti.dir/src/main.c.i
 
-CMakeFiles/roti.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/roti.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tanush/Projects/w11practice/src/main.cpp -o CMakeFiles/roti.dir/src/main.cpp.s
+CMakeFiles/roti.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/roti.dir/src/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanush/Projects/w11practice/src/main.c -o CMakeFiles/roti.dir/src/main.c.s
 
-CMakeFiles/roti.dir/src/shm.cpp.o: CMakeFiles/roti.dir/flags.make
-CMakeFiles/roti.dir/src/shm.cpp.o: /home/tanush/Projects/w11practice/src/shm.cpp
-CMakeFiles/roti.dir/src/shm.cpp.o: CMakeFiles/roti.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanush/Projects/w11practice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/roti.dir/src/shm.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/roti.dir/src/shm.cpp.o -MF CMakeFiles/roti.dir/src/shm.cpp.o.d -o CMakeFiles/roti.dir/src/shm.cpp.o -c /home/tanush/Projects/w11practice/src/shm.cpp
+CMakeFiles/roti.dir/src/shm.c.o: CMakeFiles/roti.dir/flags.make
+CMakeFiles/roti.dir/src/shm.c.o: /home/tanush/Projects/w11practice/src/shm.c
+CMakeFiles/roti.dir/src/shm.c.o: CMakeFiles/roti.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanush/Projects/w11practice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/roti.dir/src/shm.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/roti.dir/src/shm.c.o -MF CMakeFiles/roti.dir/src/shm.c.o.d -o CMakeFiles/roti.dir/src/shm.c.o -c /home/tanush/Projects/w11practice/src/shm.c
 
-CMakeFiles/roti.dir/src/shm.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/roti.dir/src/shm.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tanush/Projects/w11practice/src/shm.cpp > CMakeFiles/roti.dir/src/shm.cpp.i
+CMakeFiles/roti.dir/src/shm.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/roti.dir/src/shm.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tanush/Projects/w11practice/src/shm.c > CMakeFiles/roti.dir/src/shm.c.i
 
-CMakeFiles/roti.dir/src/shm.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/roti.dir/src/shm.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tanush/Projects/w11practice/src/shm.cpp -o CMakeFiles/roti.dir/src/shm.cpp.s
+CMakeFiles/roti.dir/src/shm.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/roti.dir/src/shm.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanush/Projects/w11practice/src/shm.c -o CMakeFiles/roti.dir/src/shm.c.s
 
-CMakeFiles/roti.dir/src/cairo.cpp.o: CMakeFiles/roti.dir/flags.make
-CMakeFiles/roti.dir/src/cairo.cpp.o: /home/tanush/Projects/w11practice/src/cairo.cpp
-CMakeFiles/roti.dir/src/cairo.cpp.o: CMakeFiles/roti.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanush/Projects/w11practice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/roti.dir/src/cairo.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/roti.dir/src/cairo.cpp.o -MF CMakeFiles/roti.dir/src/cairo.cpp.o.d -o CMakeFiles/roti.dir/src/cairo.cpp.o -c /home/tanush/Projects/w11practice/src/cairo.cpp
+CMakeFiles/roti.dir/src/cairo.c.o: CMakeFiles/roti.dir/flags.make
+CMakeFiles/roti.dir/src/cairo.c.o: /home/tanush/Projects/w11practice/src/cairo.c
+CMakeFiles/roti.dir/src/cairo.c.o: CMakeFiles/roti.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanush/Projects/w11practice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/roti.dir/src/cairo.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/roti.dir/src/cairo.c.o -MF CMakeFiles/roti.dir/src/cairo.c.o.d -o CMakeFiles/roti.dir/src/cairo.c.o -c /home/tanush/Projects/w11practice/src/cairo.c
 
-CMakeFiles/roti.dir/src/cairo.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/roti.dir/src/cairo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tanush/Projects/w11practice/src/cairo.cpp > CMakeFiles/roti.dir/src/cairo.cpp.i
+CMakeFiles/roti.dir/src/cairo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/roti.dir/src/cairo.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tanush/Projects/w11practice/src/cairo.c > CMakeFiles/roti.dir/src/cairo.c.i
 
-CMakeFiles/roti.dir/src/cairo.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/roti.dir/src/cairo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tanush/Projects/w11practice/src/cairo.cpp -o CMakeFiles/roti.dir/src/cairo.cpp.s
+CMakeFiles/roti.dir/src/cairo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/roti.dir/src/cairo.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanush/Projects/w11practice/src/cairo.c -o CMakeFiles/roti.dir/src/cairo.c.s
 
-CMakeFiles/roti.dir/src/xdg_surface.cpp.o: CMakeFiles/roti.dir/flags.make
-CMakeFiles/roti.dir/src/xdg_surface.cpp.o: /home/tanush/Projects/w11practice/src/xdg_surface.cpp
-CMakeFiles/roti.dir/src/xdg_surface.cpp.o: CMakeFiles/roti.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanush/Projects/w11practice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/roti.dir/src/xdg_surface.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/roti.dir/src/xdg_surface.cpp.o -MF CMakeFiles/roti.dir/src/xdg_surface.cpp.o.d -o CMakeFiles/roti.dir/src/xdg_surface.cpp.o -c /home/tanush/Projects/w11practice/src/xdg_surface.cpp
+CMakeFiles/roti.dir/src/xdg_surface.c.o: CMakeFiles/roti.dir/flags.make
+CMakeFiles/roti.dir/src/xdg_surface.c.o: /home/tanush/Projects/w11practice/src/xdg_surface.c
+CMakeFiles/roti.dir/src/xdg_surface.c.o: CMakeFiles/roti.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanush/Projects/w11practice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/roti.dir/src/xdg_surface.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/roti.dir/src/xdg_surface.c.o -MF CMakeFiles/roti.dir/src/xdg_surface.c.o.d -o CMakeFiles/roti.dir/src/xdg_surface.c.o -c /home/tanush/Projects/w11practice/src/xdg_surface.c
 
-CMakeFiles/roti.dir/src/xdg_surface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/roti.dir/src/xdg_surface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tanush/Projects/w11practice/src/xdg_surface.cpp > CMakeFiles/roti.dir/src/xdg_surface.cpp.i
+CMakeFiles/roti.dir/src/xdg_surface.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/roti.dir/src/xdg_surface.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tanush/Projects/w11practice/src/xdg_surface.c > CMakeFiles/roti.dir/src/xdg_surface.c.i
 
-CMakeFiles/roti.dir/src/xdg_surface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/roti.dir/src/xdg_surface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tanush/Projects/w11practice/src/xdg_surface.cpp -o CMakeFiles/roti.dir/src/xdg_surface.cpp.s
+CMakeFiles/roti.dir/src/xdg_surface.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/roti.dir/src/xdg_surface.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanush/Projects/w11practice/src/xdg_surface.c -o CMakeFiles/roti.dir/src/xdg_surface.c.s
 
-CMakeFiles/roti.dir/src/buffer.cpp.o: CMakeFiles/roti.dir/flags.make
-CMakeFiles/roti.dir/src/buffer.cpp.o: /home/tanush/Projects/w11practice/src/buffer.cpp
-CMakeFiles/roti.dir/src/buffer.cpp.o: CMakeFiles/roti.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanush/Projects/w11practice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/roti.dir/src/buffer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/roti.dir/src/buffer.cpp.o -MF CMakeFiles/roti.dir/src/buffer.cpp.o.d -o CMakeFiles/roti.dir/src/buffer.cpp.o -c /home/tanush/Projects/w11practice/src/buffer.cpp
+CMakeFiles/roti.dir/src/buffer.c.o: CMakeFiles/roti.dir/flags.make
+CMakeFiles/roti.dir/src/buffer.c.o: /home/tanush/Projects/w11practice/src/buffer.c
+CMakeFiles/roti.dir/src/buffer.c.o: CMakeFiles/roti.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanush/Projects/w11practice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/roti.dir/src/buffer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/roti.dir/src/buffer.c.o -MF CMakeFiles/roti.dir/src/buffer.c.o.d -o CMakeFiles/roti.dir/src/buffer.c.o -c /home/tanush/Projects/w11practice/src/buffer.c
 
-CMakeFiles/roti.dir/src/buffer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/roti.dir/src/buffer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tanush/Projects/w11practice/src/buffer.cpp > CMakeFiles/roti.dir/src/buffer.cpp.i
+CMakeFiles/roti.dir/src/buffer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/roti.dir/src/buffer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tanush/Projects/w11practice/src/buffer.c > CMakeFiles/roti.dir/src/buffer.c.i
 
-CMakeFiles/roti.dir/src/buffer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/roti.dir/src/buffer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tanush/Projects/w11practice/src/buffer.cpp -o CMakeFiles/roti.dir/src/buffer.cpp.s
+CMakeFiles/roti.dir/src/buffer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/roti.dir/src/buffer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanush/Projects/w11practice/src/buffer.c -o CMakeFiles/roti.dir/src/buffer.c.s
+
+CMakeFiles/roti.dir/include/xdg-shell-protocol.c.o: CMakeFiles/roti.dir/flags.make
+CMakeFiles/roti.dir/include/xdg-shell-protocol.c.o: /home/tanush/Projects/w11practice/include/xdg-shell-protocol.c
+CMakeFiles/roti.dir/include/xdg-shell-protocol.c.o: CMakeFiles/roti.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanush/Projects/w11practice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/roti.dir/include/xdg-shell-protocol.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/roti.dir/include/xdg-shell-protocol.c.o -MF CMakeFiles/roti.dir/include/xdg-shell-protocol.c.o.d -o CMakeFiles/roti.dir/include/xdg-shell-protocol.c.o -c /home/tanush/Projects/w11practice/include/xdg-shell-protocol.c
+
+CMakeFiles/roti.dir/include/xdg-shell-protocol.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/roti.dir/include/xdg-shell-protocol.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tanush/Projects/w11practice/include/xdg-shell-protocol.c > CMakeFiles/roti.dir/include/xdg-shell-protocol.c.i
+
+CMakeFiles/roti.dir/include/xdg-shell-protocol.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/roti.dir/include/xdg-shell-protocol.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tanush/Projects/w11practice/include/xdg-shell-protocol.c -o CMakeFiles/roti.dir/include/xdg-shell-protocol.c.s
 
 # Object files for target roti
 roti_OBJECTS = \
-"CMakeFiles/roti.dir/src/main.cpp.o" \
-"CMakeFiles/roti.dir/src/shm.cpp.o" \
-"CMakeFiles/roti.dir/src/cairo.cpp.o" \
-"CMakeFiles/roti.dir/src/xdg_surface.cpp.o" \
-"CMakeFiles/roti.dir/src/buffer.cpp.o"
+"CMakeFiles/roti.dir/src/main.c.o" \
+"CMakeFiles/roti.dir/src/shm.c.o" \
+"CMakeFiles/roti.dir/src/cairo.c.o" \
+"CMakeFiles/roti.dir/src/xdg_surface.c.o" \
+"CMakeFiles/roti.dir/src/buffer.c.o" \
+"CMakeFiles/roti.dir/include/xdg-shell-protocol.c.o"
 
 # External object files for target roti
-roti_EXTERNAL_OBJECTS = \
-"/home/tanush/Projects/w11practice/src/xdg-shell-protocol.o"
+roti_EXTERNAL_OBJECTS =
 
-roti: CMakeFiles/roti.dir/src/main.cpp.o
-roti: CMakeFiles/roti.dir/src/shm.cpp.o
-roti: CMakeFiles/roti.dir/src/cairo.cpp.o
-roti: CMakeFiles/roti.dir/src/xdg_surface.cpp.o
-roti: CMakeFiles/roti.dir/src/buffer.cpp.o
-roti: /home/tanush/Projects/w11practice/src/xdg-shell-protocol.o
+roti: CMakeFiles/roti.dir/src/main.c.o
+roti: CMakeFiles/roti.dir/src/shm.c.o
+roti: CMakeFiles/roti.dir/src/cairo.c.o
+roti: CMakeFiles/roti.dir/src/xdg_surface.c.o
+roti: CMakeFiles/roti.dir/src/buffer.c.o
+roti: CMakeFiles/roti.dir/include/xdg-shell-protocol.c.o
 roti: CMakeFiles/roti.dir/build.make
 roti: CMakeFiles/roti.dir/compiler_depend.ts
 roti: /usr/lib/libwayland-client.so
 roti: /usr/lib/libm.so
 roti: /usr/lib/libcairo.so
 roti: CMakeFiles/roti.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tanush/Projects/w11practice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable roti"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tanush/Projects/w11practice/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable roti"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/roti.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

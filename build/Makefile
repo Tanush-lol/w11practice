@@ -129,125 +129,149 @@ roti/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/build
 .PHONY : roti/fast
 
-src/buffer.o: src/buffer.cpp.o
+include/xdg-shell-protocol.o: include/xdg-shell-protocol.c.o
+.PHONY : include/xdg-shell-protocol.o
+
+# target to build an object file
+include/xdg-shell-protocol.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/include/xdg-shell-protocol.c.o
+.PHONY : include/xdg-shell-protocol.c.o
+
+include/xdg-shell-protocol.i: include/xdg-shell-protocol.c.i
+.PHONY : include/xdg-shell-protocol.i
+
+# target to preprocess a source file
+include/xdg-shell-protocol.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/include/xdg-shell-protocol.c.i
+.PHONY : include/xdg-shell-protocol.c.i
+
+include/xdg-shell-protocol.s: include/xdg-shell-protocol.c.s
+.PHONY : include/xdg-shell-protocol.s
+
+# target to generate assembly for a file
+include/xdg-shell-protocol.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/include/xdg-shell-protocol.c.s
+.PHONY : include/xdg-shell-protocol.c.s
+
+src/buffer.o: src/buffer.c.o
 .PHONY : src/buffer.o
 
 # target to build an object file
-src/buffer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/buffer.cpp.o
-.PHONY : src/buffer.cpp.o
+src/buffer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/buffer.c.o
+.PHONY : src/buffer.c.o
 
-src/buffer.i: src/buffer.cpp.i
+src/buffer.i: src/buffer.c.i
 .PHONY : src/buffer.i
 
 # target to preprocess a source file
-src/buffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/buffer.cpp.i
-.PHONY : src/buffer.cpp.i
+src/buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/buffer.c.i
+.PHONY : src/buffer.c.i
 
-src/buffer.s: src/buffer.cpp.s
+src/buffer.s: src/buffer.c.s
 .PHONY : src/buffer.s
 
 # target to generate assembly for a file
-src/buffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/buffer.cpp.s
-.PHONY : src/buffer.cpp.s
+src/buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/buffer.c.s
+.PHONY : src/buffer.c.s
 
-src/cairo.o: src/cairo.cpp.o
+src/cairo.o: src/cairo.c.o
 .PHONY : src/cairo.o
 
 # target to build an object file
-src/cairo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/cairo.cpp.o
-.PHONY : src/cairo.cpp.o
+src/cairo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/cairo.c.o
+.PHONY : src/cairo.c.o
 
-src/cairo.i: src/cairo.cpp.i
+src/cairo.i: src/cairo.c.i
 .PHONY : src/cairo.i
 
 # target to preprocess a source file
-src/cairo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/cairo.cpp.i
-.PHONY : src/cairo.cpp.i
+src/cairo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/cairo.c.i
+.PHONY : src/cairo.c.i
 
-src/cairo.s: src/cairo.cpp.s
+src/cairo.s: src/cairo.c.s
 .PHONY : src/cairo.s
 
 # target to generate assembly for a file
-src/cairo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/cairo.cpp.s
-.PHONY : src/cairo.cpp.s
+src/cairo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/cairo.c.s
+.PHONY : src/cairo.c.s
 
-src/main.o: src/main.cpp.o
+src/main.o: src/main.c.o
 .PHONY : src/main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-src/main.i: src/main.cpp.i
+src/main.i: src/main.c.i
 .PHONY : src/main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-src/main.s: src/main.cpp.s
+src/main.s: src/main.c.s
 .PHONY : src/main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/main.c.s
+.PHONY : src/main.c.s
 
-src/shm.o: src/shm.cpp.o
+src/shm.o: src/shm.c.o
 .PHONY : src/shm.o
 
 # target to build an object file
-src/shm.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/shm.cpp.o
-.PHONY : src/shm.cpp.o
+src/shm.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/shm.c.o
+.PHONY : src/shm.c.o
 
-src/shm.i: src/shm.cpp.i
+src/shm.i: src/shm.c.i
 .PHONY : src/shm.i
 
 # target to preprocess a source file
-src/shm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/shm.cpp.i
-.PHONY : src/shm.cpp.i
+src/shm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/shm.c.i
+.PHONY : src/shm.c.i
 
-src/shm.s: src/shm.cpp.s
+src/shm.s: src/shm.c.s
 .PHONY : src/shm.s
 
 # target to generate assembly for a file
-src/shm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/shm.cpp.s
-.PHONY : src/shm.cpp.s
+src/shm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/shm.c.s
+.PHONY : src/shm.c.s
 
-src/xdg_surface.o: src/xdg_surface.cpp.o
+src/xdg_surface.o: src/xdg_surface.c.o
 .PHONY : src/xdg_surface.o
 
 # target to build an object file
-src/xdg_surface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/xdg_surface.cpp.o
-.PHONY : src/xdg_surface.cpp.o
+src/xdg_surface.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/xdg_surface.c.o
+.PHONY : src/xdg_surface.c.o
 
-src/xdg_surface.i: src/xdg_surface.cpp.i
+src/xdg_surface.i: src/xdg_surface.c.i
 .PHONY : src/xdg_surface.i
 
 # target to preprocess a source file
-src/xdg_surface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/xdg_surface.cpp.i
-.PHONY : src/xdg_surface.cpp.i
+src/xdg_surface.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/xdg_surface.c.i
+.PHONY : src/xdg_surface.c.i
 
-src/xdg_surface.s: src/xdg_surface.cpp.s
+src/xdg_surface.s: src/xdg_surface.c.s
 .PHONY : src/xdg_surface.s
 
 # target to generate assembly for a file
-src/xdg_surface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/xdg_surface.cpp.s
-.PHONY : src/xdg_surface.cpp.s
+src/xdg_surface.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roti.dir/build.make CMakeFiles/roti.dir/src/xdg_surface.c.s
+.PHONY : src/xdg_surface.c.s
 
 # Help Target
 help:
@@ -258,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... roti"
+	@echo "... include/xdg-shell-protocol.o"
+	@echo "... include/xdg-shell-protocol.i"
+	@echo "... include/xdg-shell-protocol.s"
 	@echo "... src/buffer.o"
 	@echo "... src/buffer.i"
 	@echo "... src/buffer.s"

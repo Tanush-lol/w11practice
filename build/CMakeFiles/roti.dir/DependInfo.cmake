@@ -8,11 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/tanush/Projects/w11practice/src/buffer.cpp" "CMakeFiles/roti.dir/src/buffer.cpp.o" "gcc" "CMakeFiles/roti.dir/src/buffer.cpp.o.d"
-  "/home/tanush/Projects/w11practice/src/cairo.cpp" "CMakeFiles/roti.dir/src/cairo.cpp.o" "gcc" "CMakeFiles/roti.dir/src/cairo.cpp.o.d"
-  "/home/tanush/Projects/w11practice/src/main.cpp" "CMakeFiles/roti.dir/src/main.cpp.o" "gcc" "CMakeFiles/roti.dir/src/main.cpp.o.d"
-  "/home/tanush/Projects/w11practice/src/shm.cpp" "CMakeFiles/roti.dir/src/shm.cpp.o" "gcc" "CMakeFiles/roti.dir/src/shm.cpp.o.d"
-  "/home/tanush/Projects/w11practice/src/xdg_surface.cpp" "CMakeFiles/roti.dir/src/xdg_surface.cpp.o" "gcc" "CMakeFiles/roti.dir/src/xdg_surface.cpp.o.d"
+  "/home/tanush/Projects/w11practice/include/xdg-shell-protocol.c" "CMakeFiles/roti.dir/include/xdg-shell-protocol.c.o" "gcc" "CMakeFiles/roti.dir/include/xdg-shell-protocol.c.o.d"
+  "/home/tanush/Projects/w11practice/src/buffer.c" "CMakeFiles/roti.dir/src/buffer.c.o" "gcc" "CMakeFiles/roti.dir/src/buffer.c.o.d"
+  "/home/tanush/Projects/w11practice/src/cairo.c" "CMakeFiles/roti.dir/src/cairo.c.o" "gcc" "CMakeFiles/roti.dir/src/cairo.c.o.d"
+  "/home/tanush/Projects/w11practice/src/main.c" "CMakeFiles/roti.dir/src/main.c.o" "gcc" "CMakeFiles/roti.dir/src/main.c.o.d"
+  "/home/tanush/Projects/w11practice/src/shm.c" "CMakeFiles/roti.dir/src/shm.c.o" "gcc" "CMakeFiles/roti.dir/src/shm.c.o.d"
+  "/home/tanush/Projects/w11practice/src/xdg_surface.c" "CMakeFiles/roti.dir/src/xdg_surface.c.o" "gcc" "CMakeFiles/roti.dir/src/xdg_surface.c.o.d"
   "" "roti" "gcc" "CMakeFiles/roti.dir/link.d"
   )
 
